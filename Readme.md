@@ -2,6 +2,6 @@
 <h2>Демо</h2>
 <ul>
   <li><a href="http://primirenkov.ru/barbershop">Главная</a></li>
-  <li><a href="http://primirenkov.ru/barbershop/our_works">Наши работы</a></li>
-  <li><a href="http://primirenkov.ru/barbershop/order">Заказать</a></li>
+  <li><a href="http://primirenkov.ru/barbershop/our_works.html">Наши работы</a></li>
+  <li><a href="http://primirenkov.ru/barbershop/order.html">Заказать</a></li>
 </ul>
