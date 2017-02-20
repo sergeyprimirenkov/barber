@@ -1,0 +1,185 @@
+.login {
+  display: none;
+  position: absolute;
+  top: 135px;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 37px;
+  margin: 0 auto;
+  background-color: $bg-lightgrey;
+  color: #000;
+  opacity: 1;
+  &--open {
+    display: block;
+  }
+}
+
+.login__title {
+  display: block;
+  padding-top: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login__text {
+  text-align: center;
+}
+
+.login__info {
+  margin-bottom: 30px;
+}
+
+.login__input {
+  position: relative;
+  width: 100%;
+  padding-top: 17px;
+  padding-right: 50px;
+  padding-bottom: 17px;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  box-sizing: border-box;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #000;
+  border: 1px solid #e5ddd5;
+  outline: none;
+  &:hover {
+    border-color: #d5cabe;
+  }
+  &:focus {
+    border-color: #999;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 15px;
+    height: 17px;
+  }
+}
+
+.login__input--user {
+  background: #fff url("../../img/user.png") right 20px center no-repeat;
+}
+
+.login__input--pass {
+  background: #fff  url("../../img/locked.png") right 20px center no-repeat;
+}
+
+.login__remember-me {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.login__caption {
+  position: relative;
+  cursor: pointer;
+  padding-left: 50px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 33px;
+    height: 33px;
+    background-color: #fff;
+    border: 1px solid #e5ddd5;
+  }
+}
+
+.login__remember:checked + .login__caption::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  width: 20px;
+  height: 8px;
+  border: 2px solid #000;
+  border-top: none;
+  border-right: none;
+  transform: translateY(50%) rotate(-45deg);
+  color: #fff;
+}
+
+.login__remember-password {
+  color: #000;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.login__enter-close {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login__submit,
+.login__close {
+  width: 45%;
+  margin: 0;
+}
+
+.login__cabinet {
+  display: none;
+}
+
+@media #{$tablet-width} {
+  .login {
+    width: 460px;
+    left: 50%;
+    margin-left: -230px;
+  }
+  .login__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .login__submit {
+    width: 100%;
+  }
+  .login__cabinet {
+    display: inline;
+  }
+  .login__close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -50px;
+    top: 0;
+    padding: 0;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    &:hover {
+      background-color: transparent;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: -1px;
+      width: 30px;
+      height: 2px;
+      background-color: #fff;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: -1px;
+      width: 30px;
+      height: 2px;
+      background-color: #fff;
+      transform: rotate(-45deg);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.slider__toggles {
+  text-align: center;
+  user-select: none;
+}
+
+.slider__input {
+  display: none;
+}
+
+.slider__toggle {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 23px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #fff;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.slider__toggles--dark .slider__toggle {
+  border: 1px solid #353535;
+}
+
+.slider__toggle:last-child {
+  margin-right: 0;
+}
+
+#slider__input-1:checked ~ .slider__list .slider__item-1,
+#slider__input-2:checked ~ .slider__list .slider__item-2,
+#slider__input-3:checked ~ .slider__list .slider__item-3,
+#slider__input-4:checked ~ .slider__list .slider__item-4,
+#slider__input-5:checked ~ .slider__list .slider__item-5,
+#slider__input-6:checked ~ .slider__list .slider__item-6 {
+  display: block;
+}
+
+#slider__input-1:checked ~ .slider__toggles label[for="slider__input-1"],
+#slider__input-2:checked ~ .slider__toggles label[for="slider__input-2"],
+#slider__input-3:checked ~ .slider__toggles label[for="slider__input-3"] {
+  background-color: #fff;
+}
+
+#slider__input-4:checked ~ .slider__toggles--dark label[for="slider__input-4"],
+#slider__input-5:checked ~ .slider__toggles--dark label[for="slider__input-5"],
+#slider__input-6:checked ~ .slider__toggles--dark label[for="slider__input-6"] {
+  background-color: #353535;
+}

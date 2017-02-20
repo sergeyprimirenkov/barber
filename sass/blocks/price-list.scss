@@ -1,0 +1,161 @@
+.price-list {
+  @include gray-corner;
+  position: relative;
+  padding-bottom: 30px;
+  background-color: #353535;
+}
+
+.price-list__wrapper {
+  @include container-fluid;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.price-list__title {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.price-list__table {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.price-list__table tbody {
+  display: block;
+}
+
+.price-list__table tr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.price-list__table .col-1 {
+  display: none;
+}
+
+.price-list__table .col-2 {
+  font-weight: bold;
+}
+
+.price-list__table .col-3 {
+  order: 3;
+  width: 100%;
+}
+
+.price-list__discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 10px;
+  border: 1px solid #484848;
+  //background: url("../../img/clock.svg") 30px center no-repeat;
+  //background-size: 56px 56px;
+}
+
+.price-list__discount-text {
+  flex-grow: 1;
+  text-align: center;
+}
+
+@media #{$tablet-width} {
+  .price-list__wrapper {
+    padding: 0;
+  }
+  .price-list__title {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: left;
+  }
+  .price-list__table {
+    display: table;
+    border-spacing: 0;
+  }
+  .price-list__table tbody {
+    display: table-row-group;
+  }
+  .price-list__table tr {
+    display: table-row;
+  }
+  .price-list__table td {
+    display: table-cell;
+    vertical-align: top;
+    padding: 13px 19px;
+    border: 1px solid #484848;
+  }
+  .price-list__table .col-1 {
+    display: table-cell;
+    text-align: center;
+    color: #868686;
+  }
+  .price-list__table .col-3 {
+    width: auto;
+  }
+  .price-list__bracket {
+    display: none;
+  }
+  .price-list__table td:last-child {
+    text-align: right;
+  }
+  .price-list__discount-clock {
+    width: 70px;
+    height: 70px;
+  }
+  .price-list__discount {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .price-list__discount-text {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+@media #{$desktop-width} {
+  .price-list__section {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price-list__title {
+    padding-top: 40px;
+  }
+  .price-list__table {
+    width: 60%;
+  }
+  .price-list__discount {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+    height: 275px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    text-align: center;
+    background-position: center 30px;
+    background-size: 150px 150px;
+  }
+  .price-list__discount-clock {
+    width: 142px;
+    height: 142px;
+    margin-bottom: 30px;
+  }
+  .price-list__discount-text {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: none;
+    font-weight: normal;
+  }
+}

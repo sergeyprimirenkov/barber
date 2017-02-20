@@ -1,0 +1,180 @@
+.page-footer {
+  position: relative;
+  border-top: 1px solid rgba(229, 221, 213, .3);
+  color: $bg-lightgrey;
+  margin-top: 34px;
+}
+
+.page-footer__wrapper {
+  @include container-fluid;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.page-footer__contacts {
+  padding: 2px 59px;
+}
+
+.page-footer__contacts-hidden {
+  display: none;
+}
+
+.page-footer__contacts b {
+  display: block;
+  margin-bottom: -18px;
+}
+
+.btn--dark {
+  margin-top: -3px;
+}
+
+.page-footer__social {
+  //@include clearfix;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  margin-top: 29px;
+  font-size: 0;
+}
+
+.social-link {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  box-sizing: border-box;
+  height: 100px;
+  border: 1px solid rgba(229, 221, 213, .1);
+  &::after {
+    content: "";
+    display: block;
+    margin: auto;
+    background-image: url("../../img/sprite.png");
+  }
+  &--vk::after {
+    width: 23px;
+    height: 26px;
+    background-position: -5px -115px;
+  }
+  &--vk:active::after {
+      background-position: -38px -115px;
+  }
+  &--fb::after {
+    width: 18px;
+    height: 39px;
+    background-position: -5px -5px;
+  }
+  &--fb:active::after {
+      background-position: -33px -5px;
+  }
+  &--insta::after {
+    width: 36px;
+    height: 36px;
+    background-position: -5px -57px;
+  }
+  &--insta:active::after {
+      background-position: -51px -57px;
+  }
+}
+
+.page-footer__copyright {
+  margin-top: 27px;
+}
+
+page-footer__copyright-link {
+  margin-top: 13px;
+}
+
+.page-footer__copyright .btn {
+  margin-top: 12px;
+}
+
+@media #{$tablet-width} {
+  .page-footer {
+    border-top: none;
+    margin-top: 0;
+  }
+  .page-footer__wrapper {
+    position: relative;
+    padding-top: 31px;
+    margin-bottom: 50px;
+  }
+  .page-footer__contacts {
+    text-align: left;
+    padding: 0;
+  }
+  .page-footer__contacts b {
+    text-transform: uppercase;
+  }
+  .page-footer__contacts + .btn {
+    display: none;
+  }
+  .page-footer__contacts-hidden {
+    display: block;
+  }
+  .page-footer__social {
+    margin-top: 51px;
+  }
+  .page-footer__copyright {
+    position: absolute;
+    top: 21px;
+    right: 0;
+  }
+  .page-footer__copyright .btn {
+    width: auto;
+  }
+}
+
+@media #{$desktop-width} {
+  .page-footer__contacts {
+    //padding-left: 9px;
+  }
+  .page-footer__social {
+    position: absolute;
+    margin: 0;
+    top: 89px;
+    left: 47%;
+  }
+  .page-footer__social b {
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .social-link {
+    box-sizing: border-box;
+    width: 52px;
+    height: 50px;
+    margin-right: 7px;
+    border: 1px solid rgba(229, 221, 213, .1);  
+    &--vk::after {
+      width: 15px;
+      height: 17px;
+      background-position: -126px -93px;
+    }
+    &--vk:active::after {
+      background-position: -71px -120px;
+    }
+    &--fb::after {
+      width: 10px;
+      height: 21px;
+      background-position: -61px -5px;
+    }
+    &--fb:active::after {
+      background-position: -81px -5px;
+    }
+    &--insta::after {
+      width: 19px;
+      height: 19px;
+      background-position: -97px -57px;
+    }
+    &--insta:active::after {
+      background-position: -97px -86px;
+    }
+  }
+  .page-footer__copyright {
+    right: 0;
+  }
+}
+

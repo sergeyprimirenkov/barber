@@ -1,0 +1,50 @@
+.btn {
+  display: block;
+  box-sizing: border-box;
+  width: 87.5%;
+  margin: 0 auto;
+  padding: 15px 30px;
+  font-family: "PT Sans Narrow", Arial, sans-serif; 
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  border: 1px solid #e5ddd5;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    border: 1px solid #d5c9bd;
+  }
+  &:active {
+    background-color: #d5c9bd;
+    color: rgba(0, 0, 0, .3);
+  }
+  &--submit {
+    width: 100%;
+    color: #fff;
+    background-color: #826550;
+    border: none;
+    &:hover {
+      border: none;
+      background-color: #6a4d38;
+    }
+    &:active {
+      color: #a09187;
+    }
+  }
+  &--dark {
+    color: $bg-lightgrey;
+    border: 1px solid rgba(229, 221, 213, .1);
+    &:hover {
+      border: 1px solid rgba(229, 221, 213, .3);
+    }
+    &:active {
+      border: 1px solid #252525;
+      color: rgba(255, 255, 255, .3);
+      background-color: #252525;
+    }
+  }
+}
